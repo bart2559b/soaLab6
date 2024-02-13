@@ -25,10 +25,10 @@ public class CustomerDAO {
 	public boolean addCustomer(Customer c) {
 		try {
 			Session session = SessionUtil.getSession();
-			Transaction tx = session.beginTransaction();
-			tx.begin();
+			//Transaction tx = session.beginTransaction();
+			//tx.begin();
 			session.save(c);
-			tx.commit();
+			//tx.commit();
 			session.close();
 		} catch (TransactionException e) {
 			e.printStackTrace();
